@@ -11,3 +11,4 @@ HAL(Hardware Abstraction Layer)库由ST（意法半导体）公司用于帮助�
 + HAL库：是当前ST公司主推的库，拥有良好移植性，隐藏了寄存器级别的细节，封装程度高于LL库，因此效率低于LL库
 
 ## 目录链接
+[GPIO相关函数](https://realeyex.github.io/HAL-Wiki/#/gpioFun)
