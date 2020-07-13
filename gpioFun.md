@@ -2,9 +2,8 @@
 
 ## HAL_GPIO_Init()函数
 
-```
-void HAL_GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_InitTypeDef *GPIO_Init)
-```
+`void HAL_GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_InitTypeDef *GPIO_Init)`
+
 **作用**
 根据GPIO_Init所指向的结构体中的值对GPIOx所指向的GPIO进行初始化。
 
