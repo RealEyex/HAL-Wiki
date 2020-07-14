@@ -18,7 +18,15 @@
       name: 'STM32 HAL库参考文档',
       loadSidebar: true,
       subMaxLevel: 2,
-      search: 'auto',
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: [], // or 'auto'
+        placeholder: '在文档中搜索',
+        noData: '未找到结果!',
+        // 搜索标题的最大层级, 1 - 6
+        depth: 3,
+      },
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
       count: {
         countable: true,
         fontsize: '0.9em',
