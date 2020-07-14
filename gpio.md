@@ -6,9 +6,9 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 **原型：**`void HAL_GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_InitTypeDef *GPIO_Init)`
 
-**作用：**
+**用法：**
 
-用参数`GPIO_Init`所指向的结构体中的值初始化`GPIOx`所指向的GPIO的配置。
+将参数`GPIO_Init`所指向的结构体中的值初始化`GPIOx`所指向的GPIO的配置。
 
 **参数** `GPIO_TypeDef  *GPIOx`:
 
@@ -23,7 +23,7 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 **原型：**`void HAL_GPIO_DeInit(GPIO_TypeDef  *GPIOx, uint32_t GPIO_Pin)`
 
-**作用：**
+**用法：**
 
 将一个GPIO引脚初始化为默认值。
 
