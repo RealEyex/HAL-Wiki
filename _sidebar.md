@@ -1,6 +1,3 @@
-
-<h1 class="app-name"><a class="app-name-link" data-nosearch="" href="/">STM32 HAL库个人文档</a></h1>
-
 <!-- docs/_sidebar.md -->
 
 * [首页]()
