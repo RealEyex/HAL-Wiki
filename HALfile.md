@@ -6,27 +6,27 @@
 
 ### 外设驱动文件
 
-+ **stm32f3xx_hal_ppp.h**：定义了外设驱动所使用到的STM32通用的各种宏定义和数据类型（包括枚举常量、结构体、句柄）
-+ **stm32f3xx_hal_ppp.c**：包含了外设驱动常见且主要的STM32通用API
+**stm32f3xx_hal_ppp.h**：定义了外设驱动所使用到的STM32通用的各种宏定义和数据类型（包括枚举常量、结构体、句柄）
+**stm32f3xx_hal_ppp.c**：包含了外设驱动常见且主要的STM32通用API
 
 ### 外设驱动扩展文件
 
-+ **stm32f3xx_hal_ppp_ex.h**：定义了一些外设所需要的特殊的结构体、枚举常量以及宏定义
-+ **stm32f3xx_hal_ppp_ex.c**：对一些外设所提供的特殊的API与新定义的API，新定义的API会覆盖通用API
+**stm32f3xx_hal_ppp_ex.h**：定义了一些外设所需要的特殊的结构体、枚举常量以及宏定义
+**stm32f3xx_hal_ppp_ex.c**：对一些外设所提供的特殊的API与新定义的API，新定义的API会覆盖通用API
 
 ### HAL初始化文件
 
-+ **stm32f3xx_hal.h**：包含stm32xx_hal.c文件所使用的一些结构体、枚举常量以及宏定义
-+ **stm32f3xx_hal.c**：定义了HAL初始化或取消初始化以及相关的HAL控制API，包含了DBGMCU(调试)、Remap(重映射)、SysTick的延时函数`HAL_Delay()`
+**stm32f3xx_hal.h**：包含stm32xx_hal.c文件所使用的一些结构体、枚举常量以及宏定义
+**stm32f3xx_hal.c**：定义了HAL初始化或取消初始化以及相关的HAL控制API，包含了DBGMCU(调试)、Remap(重映射)、SysTick的延时函数`HAL_Delay()`
 
 ### HAL库的官方示例
 
-+ **stm32f3xx_hal_conf_template.h**：包含stm32xx_hal.c文件所使用的一些结构体、枚举常量以及宏定义
-+ **stm32f3xx_hal_msp_template.c**：包含了各种外设的初始化以及取消初始化
+**stm32f3xx_hal_conf_template.h**：包含stm32xx_hal.c文件所使用的一些结构体、枚举常量以及宏定义
+**stm32f3xx_hal_msp_template.c**：包含了各种外设的初始化以及取消初始化
 
 ### HAL库通用的数据类型
 
-+ **stm32f3xx_hal_def.h**：HAL库通用的一些结构体、枚举常量以及宏定义
+**stm32f3xx_hal_def.h**：HAL库通用的一些结构体、枚举常量以及宏定义
 
 
 ## 用户应用程序文件
