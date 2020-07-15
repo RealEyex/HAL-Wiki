@@ -84,21 +84,12 @@ HAL库所提供的与外设功能相关的宏，这些宏定义在对应外设�
 
 ```c
 __HAL_PPP_ENABLE_IT(__HANDLE__, __INTERRUPT__)      // 启用某个外设的中断
-
 __HAL_PPP_DISABLE_IT(__HANDLE__,__INTERRUPT__)      // 禁用某个外设的中断
-
 __HAL_PPP_GET_IT(__HANDLE__, __INTERRUPT__)         // 获取某个外设的中断状态
-
 __HAL_PPP_CLEAR_IT(__HANDLE__, __INTERRUPT__)       // 清除某个外设的中断状态
-
 __HAL_PPP_GET_FLAG(__HANDLE__, __FLAG__)            // 获取某个外设的标志位状态
-
 __HAL_PPP_CLEAR_FLAG (__HANDLE__, __FLAG__)         // 清除某个外设的标志位状态
-
 __HAL_PPP_ENABLE(__HANDLE__)                        // 启用某个外设
-
 __HAL_PPP_DISABLE(__HANDLE__)                       // 禁用某个外设
-
 __HAL_PPP_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__)  // 检查指定的中断源
-
 ```
