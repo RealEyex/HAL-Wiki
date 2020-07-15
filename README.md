@@ -1,4 +1,4 @@
-# STM32 HAL库个人文档
+# STM32 HAL库参考文档
 
 **声明：**本文档将记录在STM32开发过程中所使用到的部分HAL库的内容，本文档为个人编写而非官方文档，本文档仅供参考。
 
@@ -23,8 +23,8 @@ HAL(Hardware Abstraction Layer)库由ST（意法半导体）公司用于帮助�
 
 ## 目录链接
 
-[HAL库-文件结构](https://realeyex.github.io/HAL-Wiki/#/HALfile)
+[库文件与API简介](https://realeyex.github.io/HAL-Wiki/#/HALfile)
 
-[HAL库-数据类型](https://realeyex.github.io/HAL-Wiki/#/datatype)
+[数据结构与宏](https://realeyex.github.io/HAL-Wiki/#/datatype)
 
-[HAL库-GPIO相关函数](https://realeyex.github.io/HAL-Wiki/#/gpio)
+[GPIO相关函数](https://realeyex.github.io/HAL-Wiki/#/gpio)

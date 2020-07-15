@@ -1,7 +1,7 @@
 <!-- docs/_sidebar.md -->
 
-* [首页]()
-* [HAL库-文件结构](HALfile.md)
-* [HAL库-数据类型](datatype.md)
-* [HAL库-GPIO相关函数](gpio.md)
+* [HAL库介绍]()
+* [库文件与API简介](HALfile.md)
+* [数据结构与宏](datatype.md)
+* [GPIO相关函数](gpio.md)
 * 持续更新中...
