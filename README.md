@@ -1,6 +1,6 @@
 # STM32 HAL库参考文档
 
-**声明：**本文档将记录在STM32开发过程中所使用到的部分HAL库的内容，本文档为个人编写而非官方文档，本文档仅供参考。
+> 本文档将记录在学习HAL库的过程中所接触到的部分HAL库的内容，本文档为个人编写而非官方文档，仅供参考。
 
 ## HAL库简介
 HAL(Hardware Abstraction Layer)库由ST（意法半导体）公司用于帮助用户提高开发效率所开发的库。HAL库提供便于移植和面向功能的API，它对用户隐藏了MCU与外围设备的复杂性，ST公司所提供的STM32CubeMX可以让你图形化的配置并初始化你的项目。
@@ -21,10 +21,3 @@ HAL(Hardware Abstraction Layer)库由ST（意法半导体）公司用于帮助�
 + STM32CubeL1官方文档：[STM32CubeL1](http://www.st.com/en/embedded-software/stm32cubel1.html)
 + STM32CubeL0官方文档：[STM32CubeL0](http://www.st.com/en/embedded-software/stm32cubel0.html)
 
-## 目录链接
-
-[库文件与API简介](HALfile)
-
-[数据结构与宏](datatype)
-
-[GPIO相关函数](gpio)
