@@ -30,7 +30,7 @@ HAL结构体包括初始化结构体与配置结构体，用于保存某种外�
 
 **用途**
 
-用于表示HAL库中出现的各种状态，包括：“完成”、“错误”、“繁忙”、“超时”。
+用于表示HAL库执行某个过程中可能出现的各种状态，包括：“完成”、“错误”、“繁忙”、“超时”。
 
 **定义**
 ```c
@@ -59,6 +59,24 @@ typedef enum
 ```
 
 ### GPIO相关
+
+#### GPIO_InitTypeDef
+
+**用途**
+
+用于初始化GPIO配置的结构体
+
+**定义**
+```c
+typedef struct
+{
+  uint32_t Pin;         // 指定要配置的GPIO引脚编号
+  uint32_t Mode;        // 指定所选引脚的工作模式
+  uint32_t Pull;        // 指定所选引脚的输入状态(上拉、下拉或浮空)
+  uint32_t Speed;       // 指定所选引脚的输出速度
+  uint32_t Alternate;   // 指定所选引脚的复用功能
+}GPIO_InitTypeDef;
+```
 
 #### GPIO_PinState
 

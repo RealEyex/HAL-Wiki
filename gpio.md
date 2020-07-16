@@ -128,3 +128,34 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 该函数无返回值
 
+## HAL_GPIO_EXTI_IRQHandler()函数
+
+**原型：**`void HAL_GPIO_EXTI_IRQHandler(uint16_t GPIO_Pin)`
+
+**用法**
+
+检查指定GPIO引脚是否触发了外部中断，该函数一般由`EXTI1_IRQHandler()`函数调用
+
+**参数**`uint16_t GPIO_Pin`
+
+需要检查的引脚所对应的引脚编号
+
+**返回值**
+
+该函数无返回值
+
+## HAL_GPIO_EXTI_Callback()回调函数
+
+**原型：**`__weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)`
+
+**用法**
+
+该函数声明为`__weak`通常该函数应该由用户实现，该函数应该作为外部中断回调函数，处理对应引脚的外部中断
+
+**参数**`uint16_t GPIO_Pin`
+
+该参数表示所引发中断的引脚的引脚编号
+
+**返回值**
+
+该函数无需返回值
