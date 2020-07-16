@@ -1,7 +1,5 @@
 # STM32 HAL库参考文档
 
- {docsify-updated}
- 
 > 本文档将记录在学习HAL库的过程中所接触到的部分HAL库的内容，本文档为个人编写而非官方文档，仅供参考。
 
 ## HAL库简介
@@ -23,3 +21,6 @@ HAL(Hardware Abstraction Layer)库由ST（意法半导体）公司用于帮助�
 + STM32CubeL1官方文档：[STM32CubeL1](http://www.st.com/en/embedded-software/stm32cubel1.html)
 + STM32CubeL0官方文档：[STM32CubeL0](http://www.st.com/en/embedded-software/stm32cubel0.html)
 
+---
+
+**本文档最后更新时间：** {docsify-updated}
