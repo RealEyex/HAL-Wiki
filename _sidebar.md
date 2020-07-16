@@ -9,5 +9,3 @@
     * [HAL内核相关函数](HALcore.md)
     * [GPIO相关函数](gpio.md)
 * 持续更新中...
-
- {docsify-updated}

@@ -23,4 +23,4 @@ HAL(Hardware Abstraction Layer)库由ST（意法半导体）公司用于帮助�
 
 ---
 
-**本文档最后更新时间：** {docsify-updated}
+**本文档最后更新于** {docsify-updated}
