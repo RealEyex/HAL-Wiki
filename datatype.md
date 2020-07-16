@@ -58,6 +58,23 @@ typedef enum
 } HAL_LockTypeDef;
 ```
 
+#### HAL_TickFreqTypeDef
+
+**用途**
+
+仅用于表示Systick的频率
+
+**定义**
+```c
+typedef enum
+{
+  HAL_TICK_FREQ_10HZ         = 100U,
+  HAL_TICK_FREQ_100HZ        = 10U,
+  HAL_TICK_FREQ_1KHZ         = 1U,
+  HAL_TICK_FREQ_DEFAULT      = HAL_TICK_FREQ_1KHZ
+} HAL_TickFreqTypeDef;
+```
+
 ### GPIO相关
 
 #### GPIO_InitTypeDef

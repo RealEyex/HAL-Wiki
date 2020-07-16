@@ -2,7 +2,9 @@
 
 GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的引脚与外部硬件设备相连，可以实现与外部通讯、控制外部硬件或者采集外部硬件数据的功能。
 
-## HAL_GPIO_Init()函数
+## 初始化与取消初始化
+
+### HAL_GPIO_Init()
 
 **原型：**`void HAL_GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_InitTypeDef *GPIO_Init)`
 
@@ -22,7 +24,7 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 该函数无返回值
 
-## HAL_GPIO_DeInit()函数
+### HAL_GPIO_DeInit()
 
 **原型：**`void HAL_GPIO_DeInit(GPIO_TypeDef  *GPIOx, uint32_t GPIO_Pin)`
 
@@ -42,17 +44,17 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 该函数无返回值
 
-## HAL_GPIO_LockPin()函数
+### HAL_GPIO_LockPin()
 
 **原型：**`HAL_StatusTypeDef HAL_GPIO_LockPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)`
 
 **用法**
 
-锁定一个GPIO端口的寄存器（配置），直到该GPIO端口被重置（仅对GPIOA与GPIOB有效）。
+锁定一个GPIO端口的寄存器（配置），直到该GPIO端口被重置
 
 **参数**`GPIO_TypeDef* GPIOx`
 
-需要锁定的GPIO端口，应为GPIOA或GPIOB
+需要锁定的GPIO组，应为GPIOA或GPIOB
 
 **参数**`uint16_t GPIO_Pin`
 
@@ -64,7 +66,11 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 [枚举常量`HAL_StatusTypeDef`](datatype?id=hal_statustypedef)
 
-## HAL_GPIO_ReadPin()函数
+!> 该函数仅对GPIOA与GPIOB有效
+
+## 引脚的读写
+
+### HAL_GPIO_ReadPin()
 
 **原型：**`GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)`
 
@@ -86,7 +92,7 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 [枚举常量`GPIO_PinState`](datatype?id=gpio_pinstate)
 
-## HAL_GPIO_WritePin()函数
+### HAL_GPIO_WritePin()
 
 **原型：**`GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)`
 
@@ -108,7 +114,7 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 !> 此函数使用GPIOx_BSRR和GPIOx_BRR寄存器允许原子读取/修改访问。这样使得在读取和修改之间不会触发IRQ
 
-## HAL_GPIO_TogglePin()函数
+### HAL_GPIO_TogglePin()
 
 **原型：**`void HAL_GPIO_TogglePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)`
 
@@ -128,7 +134,9 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 该函数无返回值
 
-## HAL_GPIO_EXTI_IRQHandler()函数
+## 外部中断
+
+### HAL_GPIO_EXTI_IRQHandler()
 
 **原型：**`void HAL_GPIO_EXTI_IRQHandler(uint16_t GPIO_Pin)`
 
@@ -144,13 +152,13 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 该函数无返回值
 
-## HAL_GPIO_EXTI_Callback()回调函数
+### HAL_GPIO_EXTI_Callback()
 
 **原型：**`__weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)`
 
 **用法**
 
-该函数声明为`__weak`通常该函数应该由用户实现，该函数应该作为外部中断回调函数，处理对应引脚的外部中断
+该函数一般作为外部中断回调函数，处理对应引脚的外部中断。并且该函数可以由用户根据需要重新定义
 
 **参数**`uint16_t GPIO_Pin`
 

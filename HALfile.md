@@ -59,7 +59,7 @@ HAL库的配置文件，包含HAL库各个模块文件的宏定义以之用于�
 
 **stm32f3xx_it.c/.h**
 
-这两个文件包含异常处理程序和外设中断服务程序，其中文件中的`SysTick_Handler()`函数在Systick ISR中每`1ms`被调用一次，该函数默认会调用`HAL_IncTick()`函数，而`HAL_IncTick()`函数负责增加用作应用程序时基的全局变量`uwTick`，且`HAL_IncTick()`函数声明为`__weak`即用户可以自己实现该函数。
+这两个文件包含异常处理程序和外设中断服务程序，其中文件中的`SysTick_Handler()`函数在Systick ISR中每`1ms`被调用一次，该函数默认会调用`HAL_IncTick()`函数，而`HAL_IncTick()`函数负责使用作应用程序时基的全局变量`uwTick`递增，且`HAL_IncTick()`函数声明为`__weak`即用户可以自己实现该函数。
 
 **main.c/.h**
 
