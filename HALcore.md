@@ -14,5 +14,5 @@
 
 返回`HAL_StatusTypeDef`结构体，用于表示初始化是否成功
 
-[`HAL_StatusTypeDef`结构体](./HAL-Wiki/#/datatype?id=hal_statustypedef)
+[`HAL_StatusTypeDef`结构体](../HAL-Wiki/#/datatype?id=hal_statustypedef)
 

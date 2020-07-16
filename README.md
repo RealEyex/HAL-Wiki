@@ -23,8 +23,8 @@ HAL(Hardware Abstraction Layer)库由ST（意法半导体）公司用于帮助�
 
 ## 目录链接
 
-[库文件与API简介](https://realeyex.github.io/HAL-Wiki/#/HALfile)
+[库文件与API简介](./HALfile)
 
-[数据结构与宏](https://realeyex.github.io/HAL-Wiki/#/datatype)
+[数据结构与宏](./datatype)
 
-[GPIO相关函数](https://realeyex.github.io/HAL-Wiki/#/gpio)
+[GPIO相关函数](./gpio)
