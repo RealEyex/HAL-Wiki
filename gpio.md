@@ -62,7 +62,7 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 返回枚举常量`HAL_StatusTypeDef`，如果锁定成功返回`HAL_OK`否则返回`HAL_ERROR`
 
-[枚举常量`HAL_StatusTypeDef`](https://realeyex.github.io/HAL-Wiki/#/datatype?id=%e6%9e%9a%e4%b8%be%e5%b8%b8%e9%87%8f-hal_statustypedef)
+[枚举常量`HAL_StatusTypeDef`](./HAL-Wiki/#/datatype?id=hal_statustypedef)
 
 ## HAL_GPIO_ReadPin()函数
 
@@ -84,7 +84,7 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 返回参数对应输入端口的引脚状态，返回值类型为枚举常量`GPIO_PinState`，返回值为`GPIO_PIN_RESET`或`GPIO_PIN_SET`
 
-[枚举常量`GPIO_PinState`](https://realeyex.github.io/HAL-Wiki/#/datatype?id=%e6%9e%9a%e4%b8%be%e5%b8%b8%e9%87%8f-gpio_pinstate)
+[枚举常量`GPIO_PinState`](./HAL-Wiki/#/datatype?id=gpio_pinstate)
 
 ## HAL_GPIO_WritePin()函数
 
