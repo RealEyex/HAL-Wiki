@@ -23,19 +23,13 @@
       name: 'HAL库参考文档',
       repo: 'RealEyex/HAL-Wiki',
       basePath: '/docs/',
-      homepage: 'index.md',
+      homepage: '/docs/index.md',
       loadSidebar: true,
       auto2top: true,
       subMaxLevel: 3,
       search: {
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-        paths: [
-          '/',
-          'HALfile',
-          'datatype',
-          'HALcore',
-          'gpio'
-        ],
+        paths: 'auto',
         placeholder: '在文档中搜索',
         noData: '未找到结果!',
         // 搜索标题的最大层级, 1 - 6
