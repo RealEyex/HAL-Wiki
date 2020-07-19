@@ -14,7 +14,7 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 **参数** `GPIO_TypeDef  *GPIOx`
 
-指向GPIO的GPIO_TypeDef指针
+指向GPIO端口的GPIO_TypeDef指针
 
 **参数**`GPIO_InitTypeDef *GPIO_Init`
 
