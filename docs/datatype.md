@@ -247,7 +247,7 @@ typedef struct
 } TIM_SlaveConfigTypeDef;
 ```
 
-#### TIM_SlaveConfigTypeDef
+#### TIM_BreakDeadTimeConfigTypeDef
 
 **用途**
 

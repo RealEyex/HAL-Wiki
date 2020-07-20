@@ -224,7 +224,6 @@
 
 !> 注意：当计时器在单脉冲(OnePulse)模式时，没有该函数
 
-
 ## 其它函数
 
 ### HAL_TIM_IRQHandler
@@ -243,3 +242,191 @@
 
 该函数无返回值
 
+### HAL_TIM_OC_ConfigChannel
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_OC_ConfigChannel(TIM_HandleTypeDef *htim, TIM_OC_InitTypeDef *sConfig, uint32_t Channel)`
+
+**用法**
+
+用于配置指定计时器为输出比较模式，并指定输出通道，并返回该过程执行的结果
+
+**参数**`TIM_HandleTypeDef *htim`
+
+该参数指向需要配置的计时器的句柄
+
+**参数**`TIM_OC_InitTypeDef *sConfig`
+
+该参数指向包含输出比较(OC)模式的配置信息的句柄
+
+**参数**`uint32_t Channel`
+
+指定输出PWM波的通道
+
+**返回值**
+
+返回该函数执行的结果
+
+### HAL_TIM_PWM_ConfigChannel
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_PWM_ConfigChannel(TIM_HandleTypeDef *htim, TIM_OC_InitTypeDef *sConfig, uint32_t Channel)`
+
+**用法**
+
+用于配置指定计时器为PWM输出模式，并指定输出通道，并返回该过程执行的结果
+
+**参数**`TIM_HandleTypeDef *htim`
+
+该参数指向需要配置的计时器的句柄
+
+**参数**`TIM_OC_InitTypeDef *sConfig`
+
+该参数指向包含输出比较(OC)模式的配置信息的句柄
+
+**参数**`uint32_t Channel`
+
+指定输出PWM波的通道
+
+**返回值**
+
+返回该函数执行的结果
+
+### HAL_TIM_IC_ConfigChannel
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_IC_ConfigChannel(TIM_HandleTypeDef *htim, TIM_IC_InitTypeDef *sConfig, uint32_t Channel)`
+
+**用法**
+
+用于配置指定计时器为输入捕获模式，并指定输入捕获的通道，并返回该过程执行的结果
+
+**参数**`TIM_HandleTypeDef *htim`
+
+该参数指向需要配置的计时器的句柄
+
+**参数**`TIM_IC_InitTypeDef *sConfig`
+
+该参数指向包含输入捕获(IC)模式的配置信息的句柄
+
+**参数**`uint32_t Channel`
+
+指定捕获输入的通道
+
+**返回值**
+
+返回该函数执行的结果
+
+
+### HAL_TIM_OnePulse_ConfigChannel
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_OnePulse_ConfigChannel(TIM_HandleTypeDef *htim, TIM_OnePulse_InitTypeDef *sConfig, uint32_t OutputChannel,  uint32_t InputChannel)`
+
+**用法**
+
+用于配置指定计时器为单脉冲模式，并指定输入、输出通道，并返回该过程执行的结果
+
+
+**参数**`TIM_HandleTypeDef *htim`
+
+该参数指向需要进行配置的计时器的句柄
+
+**参数**`TIM_OnePulse_InitTypeDef *sConfig`
+
+该参数指向包含单脉冲模式的配置信息的句柄
+
+**参数**`uint32_t OutputChannel`
+
+指定输入信号的通道
+
+**参数**`uint32_t InputChannel`
+
+指定输出PWM波的通道
+
+**返回值**
+
+返回该函数执行的结果
+
+
+### HAL_TIM_ConfigOCrefClear
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_ConfigOCrefClear(TIM_HandleTypeDef *htim, TIM_ClearInputConfigTypeDef *sClearInputConfig, uint32_t Channel);`
+
+**用法**
+
+用于清除指定计时器的指定通道的配置信息
+
+**参数**`TIM_HandleTypeDef *htim`
+
+指定计时器的句柄
+
+**参数**`TIM_ClearInputConfigTypeDef *sClearInputConfig`
+
+要清除配置的结构体
+
+**参数**`uint32_t Channel`
+
+指定要清除的通道
+
+**返回值**
+
+返回该过程执行的结果
+
+### HAL_TIM_ConfigClockSource
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_ConfigClockSource(TIM_HandleTypeDef *htim, TIM_ClockConfigTypeDef *sClockSourceConfig)`
+
+**用法**
+
+为指定的计时器配置时钟源
+
+**参数**`TIM_HandleTypeDef *htim`
+
+指定计时器的句柄
+
+**参数**`TIM_ClockConfigTypeDef *sClockSourceConfig`
+
+包含时钟源配置的结构体指针
+
+**返回值**
+
+返回该过程执行的结果
+
+
+### HAL_TIM_ConfigTI1Input
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_ConfigTI1Input(TIM_HandleTypeDef *htim, uint32_t TI1_Selection)`
+
+**用法**
+
+为计时器输入信号TI1指定输入的通道，可以是CH1、CH2、CH3、CH4之间的XOR关系
+
+**参数**`TIM_HandleTypeDef *htim`
+
+指定的计时器句柄
+
+**参数**`uint32_t TI1_Selection`
+
+指定通道CH1、CH2、CH3、CH4
+
+**返回值**
+
+返回该过程执行的结果
+
+
+### HAL_TIM_SlaveConfigSynchro
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_SlaveConfigSynchro(TIM_HandleTypeDef *htim, TIM_SlaveConfigTypeDef *sSlaveConfig)`
+
+**用法**
+
+将一个计时器配置为从计时器(从模式)
+
+**参数**`TIM_HandleTypeDef *htim`
+
+指定的计时器句柄
+
+**参数**`TIM_SlaveConfigTypeDef *sSlaveConfig`
+
+从计时器的配置项
+
+**返回值**
+
+返回该过程执行的结果
