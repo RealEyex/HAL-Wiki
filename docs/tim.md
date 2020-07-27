@@ -417,7 +417,7 @@
 
 **用法**
 
-将一个计时器配置为从计时器(从模式)
+将一个计时器配置为从计时器(从模式)，禁用用该计时器的中断
 
 **参数**`TIM_HandleTypeDef *htim`
 
@@ -426,6 +426,59 @@
 **参数**`TIM_SlaveConfigTypeDef *sSlaveConfig`
 
 从计时器的配置项
+
+**返回值**
+
+返回该过程执行的结果
+
+### HAL_TIM_SlaveConfigSynchro_IT
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_SlaveConfigSynchro_IT(TIM_HandleTypeDef *htim, TIM_SlaveConfigTypeDef *sSlaveConfig)`
+
+**用法**
+
+将一个计时器配置为从计时器(从模式)，并启用该计时器的中断
+
+**参数**`TIM_HandleTypeDef *htim`
+
+指定的计时器句柄
+
+**参数**`TIM_SlaveConfigTypeDef *sSlaveConfig`
+
+从计时器的配置项
+
+**返回值**
+
+返回该过程执行的结果
+
+
+### HAL_TIM_DMABurst_WriteStart
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_DMABurst_WriteStart(TIM_HandleTypeDef *htim, uint32_t BurstBaseAddress, uint32_t BurstRequestSrc, uint32_t *BurstBuffer, uint32_t  BurstLength)`
+
+**用法**
+
+将DMA源的数据在收到触发信号时写入指定的计时器寄存器中
+
+**参数**`TIM_HandleTypeDef *htim`
+
+指定的计时器句柄
+
+**参数**`uint32_t BurstBaseAddress`
+
+数据的源地址
+
+**参数**`uint32_t BurstRequestSrc`
+
+触发信号(请求)来源
+
+**参数**`uint32_t *BurstBuffer`
+
+存放数据的缓冲区的指针
+
+**参数**`uint32_t *BurstBuffer`
+
+缓冲区大小
 
 **返回值**
 
