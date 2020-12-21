@@ -94,7 +94,7 @@ GPIO是通用输入/输出端口的简称，是STM32可控制的引脚。GPIO的
 
 ### HAL_GPIO_WritePin()
 
-**原型：**`GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)`
+**原型：**`GPIO_PinState HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)`
 
 **用法**
 
