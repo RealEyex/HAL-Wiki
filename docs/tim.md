@@ -483,3 +483,10 @@
 **返回值**
 
 返回该过程执行的结果
+
+### HAL_TIM_DMABurst_MultiWriteStart
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_DMABurst_MultiWriteStart (TIM_HandleTypeDef * htim, uint32_t BurstBaseAddress, uint32_t BurstRequestSrc, uint32_t * BurstBuffer, uint32_t BurstLength, uint32_t DataLength)`
+
+**用法**
+
