@@ -3,6 +3,7 @@
 对于STM32一般有着多种计时器，包括：高级计时器、通用计时器、基本计时器、看门狗计时器，而这些计时器都几乎拥有差不多的工作模式。
 
 计时器工作模式：
+
 + 基本计时/时基(Base)模式
 + 输出比较(OC)模式
 + 输入捕获(IC)模式
@@ -321,7 +322,7 @@
 
 **用法**
 
-用于配置指定计时器为单脉冲模式，并指定输入、输出通道，并返回该过程执行的结果
+用于配置指定计时器为单脉冲(OnePulse)模式，并指定输入、输出通道，并返回该过程执行的结果
 
 
 **参数**`TIM_HandleTypeDef *htim`
@@ -458,7 +459,7 @@
 
 **用法**
 
-将DMA源的数据在收到触发信号时写入指定的计时器寄存器中
+配置DMA突发，以将数据从内存传输到TIM外设
 
 **参数**`TIM_HandleTypeDef *htim`
 
@@ -466,17 +467,17 @@
 
 **参数**`uint32_t BurstBaseAddress`
 
-数据的源地址
+DMA突发数据的基地址
 
 **参数**`uint32_t BurstRequestSrc`
 
-触发信号(请求)来源
+DMA突发请求源
 
 **参数**`uint32_t *BurstBuffer`
 
-存放数据的缓冲区的指针
+缓冲区的指针
 
-**参数**`uint32_t *BurstBuffer`
+**参数**`uint32_t *BurstLength`
 
 缓冲区大小
 
@@ -489,4 +490,145 @@
 **原型：**`HAL_StatusTypeDef HAL_TIM_DMABurst_MultiWriteStart (TIM_HandleTypeDef * htim, uint32_t BurstBaseAddress, uint32_t BurstRequestSrc, uint32_t * BurstBuffer, uint32_t BurstLength, uint32_t DataLength)`
 
 **用法**
+
+配置DMA突发，以将多个数据从内存传输到TIM外设
+
+**参数**`TIM_HandleTypeDef *htim`
+
+指定的计时器句柄
+
+**参数**`uint32_t BurstBaseAddress`
+
+DMA突发数据的基地址
+
+**参数**`uint32_t BurstRequestSrc`
+
+DMA突发请求源
+
+**参数**`uint32_t *BurstBuffer`
+
+存放数据的缓冲区的指针
+
+**参数**`uint32_t *BurstLength`
+
+缓冲区大小
+
+**参数**`uint32_t DataLength`
+数据长度(0x0001 至 0xFFFF)
+
+**返回值**
+
+返回该过程执行的结果
+
+### HAL_TIM_DMABurst_WriteStop
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_DMABurst_WriteStop(TIM_HandleTypeDef * htim,uint32_t BurstRequestSrc)`
+
+**用法**
+
+停止计时器的DMA突发写入
+
+**参数**`TIM_HandleTypeDef *htim`
+
+计时器句柄
+
+**参数**`uint32_t BurstRequestSrc`
+
+DMA突发请求源
+
+**返回值**
+
+返回该过程执行的结果
+
+
+### HAL_TIM_DMABurst_ReadStart
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_DMABurst_ReadStart (TIM_HandleTypeDef * htim,uint32_t BurstBaseAddress, uint32_t BurstRequestSrc, uint32_t * BurstBuffer, uint32_t
+BurstLength)`
+
+**用法**
+
+配置DMA突发，以将数据从TIM外设传输到内存
+
+**参数**`TIM_HandleTypeDef *htim`
+
+计时器句柄
+
+**参数**`uint32_t BurstBaseAddress`
+
+DMA突发数据的基地址
+
+**参数**`uint32_t BurstRequestSrc`
+
+DMA突发请求源
+
+**参数**`uint32_t *BurstBuffer`
+
+存放数据的缓冲区的指针
+
+**参数**`uint32_t *BurstLength`
+
+缓冲区大小
+
+**返回值**
+
+返回该过程执行的结果
+
+### HAL_TIM_DMABurst_MultiReadStart
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_DMABurst_MultiReadStart (TIM_HandleTypeDef * htim,uint32_t BurstBaseAddress, uint32_t BurstRequestSrc, uint32_t * BurstBuffer, uint32_t
+BurstLength, uint32_t DataLength)`
+
+**用法**
+
+配置DMA突发，以将数据从TIM外设传输到内存
+
+**参数**`TIM_HandleTypeDef *htim`
+
+计时器句柄
+
+**参数**`uint32_t BurstBaseAddress`
+
+DMA突发数据的基地址
+
+**参数**`uint32_t BurstRequestSrc`
+
+DMA突发请求源
+
+**参数**`uint32_t *BurstBuffer`
+
+存放数据的缓冲区的指针
+
+**参数**`uint32_t *BurstLength`
+
+缓冲区大小
+
+**参数**`uint32_t DataLength`
+数据长度(0x0001 至 0xFFFF)
+
+**返回值**
+
+返回该过程执行的结果
+
+
+### HAL_TIM_DMABurst_ReadStop
+
+**原型：**`HAL_StatusTypeDef HAL_TIM_DMABurst_ReadStop(TIM_HandleTypeDef * htim,uint32_t BurstRequestSrc)`
+
+**用法**
+
+停止计时器的DMA突发读取
+
+**参数**`TIM_HandleTypeDef *htim`
+
+计时器句柄
+
+**参数**`uint32_t BurstRequestSrc`
+
+DMA突发请求源
+
+**返回值**
+
+返回该过程执行的结果
+
 
